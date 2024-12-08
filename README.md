@@ -92,3 +92,24 @@ Class similar to structures, have method, i.e., function members(methods and pro
 
 
 ## Template
+A way to use the same code for different type of data.
+Declared using: `template <typename type>`
+This is how vectors work, the type is used to initialize the vector which uses generic code to manage lists of items.
+[Watch this video for explaining the Template](https://www.youtube.com/watch?v=I-hZkUa9mIs)
+
+**example**
+```cpp
+#include <iostream>
+template<typename T>
+    void Print(T value){
+    std::cout << value << std::endl;
+} 
+int main(){
+
+
+    Print(10);
+    Print("hello");
+    Print(3.14f);  
+}
+```
+

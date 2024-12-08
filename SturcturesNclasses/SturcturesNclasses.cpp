@@ -80,6 +80,18 @@ private:
 	std::vector<Employee> m_manages;
 };
 
+// Template 
+template <typename T, int N>
+class Array
+{
+public:
+	T m_array[N];
+	int get_size() { return N; }
+};
+
+
+
+
 
 
 void movement(enum State state) {
@@ -144,6 +156,24 @@ int main()
 
 	// Provide report
 	dave.report();
+
+
+	std::cout << "Template" << std::endl;
+    std::cout << std::setw(50) << std::setfill('=') << "=" << std::endl;
+
+	Array<std::string, 5> names;
+	names.m_array[0] = "Linda";
+	names.m_array[1] = "Carol";
+	names.m_array[2] = "Mark";
+	names.m_array[3] = "Dave";
+	names.m_array[4] = "John";
+	std::cout << "Size of array: " << names.get_size() << std::endl;
+	std::cout << std::setw(15) << std::left << std::setfill(' ') << "Names: " << std::endl;
+	for (int i = 0; i < names.get_size(); i++) {
+		std::cout << names.m_array[i] << " " << std::endl;
+	}
+
+	std::cout << std::endl;
 
 }
 
